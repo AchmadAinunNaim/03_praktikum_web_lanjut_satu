@@ -70,7 +70,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// halaman PengaLaman Kuliah
-Route::get('/experience', function () {
-    return view('experience');
-});
+
+Route::get('/experience', [App\Http\Controllers\kampusController::class, 'show']);
